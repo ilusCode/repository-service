@@ -1,2 +1,12 @@
 server:
   port: 8080
+
+github:
+  token: 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
+  user: ilusCode
+
+url:
+  github_repo: https://api.github.com
+
+service:
+  github_repo: /users/${github.user}/repos
