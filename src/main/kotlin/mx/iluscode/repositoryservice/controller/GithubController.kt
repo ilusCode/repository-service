@@ -8,6 +8,7 @@ import mx.iluscode.repositoryservice.services.IRepositoryProviderService
 import org.slf4j.LoggerFactory
 import org.springframework.http.MediaType.APPLICATION_JSON_VALUE
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -16,9 +17,8 @@ import reactor.core.publisher.Mono
 @Slf4j
 @RestController
 @RequestMapping(path = ["/api"])
+@CrossOrigin(origins = ["*"])
 class GithubController(val rps: IRepositoryProviderService) : IGithubController {
-
-    private val log = LoggerFactory.getLogger(javaClass)
 
     @GetMapping(path = ["/repositories"], produces = [APPLICATION_JSON_VALUE])
     override fun getRepositories(@PathParam(value = "provider") provider: RepositoryProviderEnum): ResponseEntity<Mono<List<RepositoryGithub>>> {

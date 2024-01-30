@@ -2,9 +2,7 @@ package mx.iluscode.repositoryservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.web.bind.annotation.CrossOrigin
 
-@CrossOrigin
 @SpringBootApplication
 class RepositoryServiceApplication
 
