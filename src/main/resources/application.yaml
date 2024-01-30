@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 80
 
 github:
-  token: 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
+  token: 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
   user: ilusCode
 
 url:
