@@ -2,7 +2,7 @@ server:
   port: 80
 
 github:
-  token: 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
+  token: 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
   user: ilusCode
 
 url:
